@@ -10,7 +10,8 @@ export const CardContainer = styled.div`
   padding: 0 36px 28px 35px;
   height: 289px;
   width: 300px;
-  
+  margin-right: 18px;
+
   @media ${device.tablet} {
     margin-right: 18px;
   }

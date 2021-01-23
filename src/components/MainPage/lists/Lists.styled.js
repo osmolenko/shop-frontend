@@ -36,6 +36,8 @@ export const CardMoreLink = styled(headerBlackLink)`
   cursor: pointer;
   
   @media ${device.mobile} {
+    text-align: center;
+    width: 60vw;
     padding: 19px 77px;
     box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
     border-radius: 70px;
@@ -47,7 +49,7 @@ export const CardsContainer = styled.div`
   margin-top: 40px;
   display: flex;
   flex-flow: row nowrap;
-  justify-content: space-around;
+  justify-content: flex-start;
   
   @media ${device.tablet} {
     flex-flow: row ${(props)=> props.products ? 'wrap' : 'nowrap'};
