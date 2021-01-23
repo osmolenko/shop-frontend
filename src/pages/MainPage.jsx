@@ -1,13 +1,14 @@
 import React from 'react'
 import {MainPageContainer} from "./MainPage.styled";
 import Header from "../components/header/Header";
-import Slider from "../components/slider/Slider";
-import CardList from "../components/cards/CardList";
-import Tagline from "../components/tagline/Tagline";
-import Lure from "../components/lure/Lure";
-import Manufacturers from "../components/manufacturers/Manufacturers";
-import ContactUs from "../components/contactUs/ContactUs";
+import Slider from "../components/MainPage/slider/Slider";
+import News from "../components/MainPage/news/News";
+import Lure from "../components/MainPage/lure/Lure";
+import Manufacturers from "../components/MainPage/manufacturers/Manufacturers";
+import ContactUs from "../components/MainPage/contactUs/ContactUs";
 import {Footer} from "../components/footer/Footer";
+import CatList from "../components/MainPage/lists/CatList";
+import ProductList from "../components/MainPage/lists/ProductList";
 
 
 export default class MainPage extends React.Component{
@@ -15,33 +16,34 @@ export default class MainPage extends React.Component{
 
     render(){
         const categories = {
-            name: 'Категории товаров',
+            name: 'Каталог товаров',
             link: '#',
             data: [
-                { img: 'https://images.wallpaperscraft.ru/image/siluet_zakat_gorizont_125008_1600x900.jpg', name: 'Сладости', link: '#' },
-                { img: 'https://images.wallpaperscraft.ru/image/siluet_zakat_gorizont_125008_1600x900.jpg', name: 'Товары для дома', link: '#' },
-                { img: 'https://images.wallpaperscraft.ru/image/siluet_zakat_gorizont_125008_1600x900.jpg', name: 'Ароматерапия', link: '#' },
-                ]
+                { img: 'https://shop.osmolenko.cloud/cats/1.png', name: 'Сухофрукты', link: '#' },
+                { img: 'https://shop.osmolenko.cloud/cats/2.png', name: 'Товары для дома', link: '#' },
+                { img: 'https://shop.osmolenko.cloud/cats/3.png', name: 'Полезные сладости', link: '#' },
+                { img: 'https://shop.osmolenko.cloud/cats/4.png', name: 'Ароматерапия', link: '#' },
+            ]
         }
 
         const sale = {
             name: 'Акции',
             data: [
-                { img: 'https://images.wallpaperscraft.ru/image/siluet_zakat_gorizont_125008_1600x900.jpg', name: 'Английская соль', link: '#' },
-                { img: 'https://images.wallpaperscraft.ru/image/siluet_zakat_gorizont_125008_1600x900.jpg', name: 'Клюква сушеная', link: '#' },
-                { img: 'https://images.wallpaperscraft.ru/image/siluet_zakat_gorizont_125008_1600x900.jpg', name: 'Чай травяной', link: '#' },
+                { img: 'https://s3.images-iherb.com/aur/aur91696/y/14.jpg', name: 'Английская соль для ванн Relaxing Lavender, 110 г', link: '#', art: '12414405', price:'120', status: true },
+                { img: 'https://s3.images-iherb.com/peo/peo59610/y/2.jpg', name: 'Клюква сушеная', link: '#', art: '12414405', price:'120', status: true },
+                { img: 'https://s3.images-iherb.com/cgn/cgn01756/y/0.jpg', name: 'Чай травяной', link: '#', art: '12414405', price:'120', status: false },
             ]
         }
 
-        const manList = ['Lorem ipsum dolor', 'Lorem ipsum dolor','Lorem ipsum dolor','Lorem ipsum dolor','Lorem ipsum dolor','Lorem ipsum dolor','Lorem ipsum dolor','Lorem ipsum dolor','Lorem ipsum dolor','Lorem ipsum dolor','Lorem ipsum dolor','Lorem ipsum dolor']
+        const manList = ['ABONETT, Венгрия', 'Almawin, Германия', 'Amelon, Иран', 'Amma, Индия/Украина', 'Фрея, Украина', 'August, Украина', 'BDJO.honey, Украина', 'Almawin, Германия', 'Bio Levante, Италия', 'Bio Nota, Польша', 'Bio Planer, Польша', 'Biomir, Украина', 'Фрея, Украина', 'Vivo, Украина', 'Vins, Украина', 'Biomir, Украина', 'De La Mark, Украина', 'Deo, Болгария', 'EasyGreen, США', 'Eco Panda, Австрия']
 
         return(
             <MainPageContainer>
                 <Header/>
                 <Slider/>
-                <CardList data={categories}/>
-                <CardList data={sale}/>
-                <Tagline text='Слоган'/>
+                <CatList data={categories}/>
+                <ProductList data={sale}/>
+                <News/>
                 <Lure/>
                 <Manufacturers data={manList}/>
                 <ContactUs/>

@@ -14,12 +14,13 @@ import {
 } from "./FooterTop.styled";
 import facebook from '../../images/facebook.svg'
 import linkedin from '../../images/linkedin.svg'
+import logo from '../../images/logo_white.svg'
 
 export class FooterTop extends React.Component{
     render() {
         return(
             <FooterTopContainer>
-                <FooterTopLogo>Logo</FooterTopLogo>
+                <FooterTopLogo><img src={logo} alt='eco shop'/></FooterTopLogo>
 
                 <FooterTopLinkContainer>
                     <FooterTopLink href='#'>Категории</FooterTopLink>

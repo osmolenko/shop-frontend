@@ -1,19 +1,91 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: 'LatoWeb', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 a, button {
   text-decoration: none;
+  outline: 0 !important;
 }
 
 h1, h2, h3, h4, h5, h6, p, a, button, textarea{
   color: #262626;
 }
 
-textarea{
-  font-family: 'LatoWeb', sans-serif;
+h1 {
+  font-family: 'Exo 2';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 60px;
+  line-height: 65px;
+  color: #C4C4C4;
+}
+
+h2 {
+  font-family: 'Exo 2';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 38px;
+  line-height: 24px;
+  color: #C4C4C4;
+}
+
+h3{
+  font-family: 'Exo 2';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 35px;
+  line-height: 65px;
+  color: #C4C4C4;
+}
+
+h4{
+  font-family: 'Exo 2';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 23px;
+  line-height: 41px;
+  color: #C4C4C4;
+}
+
+
+@media only screen and (max-width: 425px) {
+  h1{
+    font-family: 'Exo 2';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 45px;
+    line-height: 120%;
+    color: #C4C4C4;
+  }
+
+  h2{
+    font-family: 'Exo 2';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 120%;
+    color: #C4C4C4;
+  }
+
+  h3{
+    font-family: 'Exo 2';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 35px;
+    line-height: 120%;
+    color: #C4C4C4;
+
+  }
+
+  h4{
+    font-family: 'Exo 2';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 23px;
+    line-height: 41px;
+    color: #C4C4C4;
+  }
 }

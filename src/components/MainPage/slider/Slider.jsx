@@ -6,9 +6,10 @@ export default class Slider extends React.Component{
     render(){
 
         const images = [
-            { url: "https://images.wallpaperscraft.com/image/sunset_field_sky_beautiful_landscape_116179_1366x768.jpg" },
-            { url: "https://images.wallpaperscraft.com/image/sunset_skyline_sky_night_landscape_120346_1366x768.jpg" },
-            { url: "https://images.wallpaperscraft.ru/image/siluet_zakat_gorizont_125008_1600x900.jpg" },
+            { url: "https://shop.osmolenko.cloud/banner/1.png" },
+            { url: "https://shop.osmolenko.cloud/banner/2.png" },
+            { url: "https://shop.osmolenko.cloud/banner/3.png" },
+            { url: "https://shop.osmolenko.cloud/banner/4.png" },
         ];
 
         return(
