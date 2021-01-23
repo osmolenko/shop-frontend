@@ -3,7 +3,6 @@ import {ManContainer, ManHeader, ManListContainer, ManListItem} from "./manufact
 
 export default class Manufacturers extends React.Component{
     render(){
-        console.log(this.props.data)
         return(
             <ManContainer>
                 <ManHeader>Производители</ManHeader>

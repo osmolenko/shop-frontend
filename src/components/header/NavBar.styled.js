@@ -67,7 +67,7 @@ export const SearchButton = styled.button`
   padding-left: 16px;
 `
 
-const NavBarButton = styled.button`
+export const NavBarButton = styled.button`
   height: 48px;
   width: 48px;
   margin-right: 20px;

@@ -9,7 +9,8 @@ import {
     SearchButton,
     SearchContainer,
     SearchInput,
-    WishButton, LinkContainer
+    WishButton,
+    LinkContainer
 } from "./NavBar.styled";
 import search from '../../images/search.svg'
 import wish from '../../images/wish.svg'
@@ -17,11 +18,17 @@ import cart from '../../images/cart.svg'
 import arrowDown from '../../images/arrow-down.svg'
 import logo_grey from '../../images/logo_grey.svg'
 import hamburger from '../../images/hamburger-icon.svg'
+import {connect} from "react-redux";
+import {openMobileNavbar} from "../../actions/navbar.action";
+import NavBarMobile from "./NavBarMobile";
 
-export default class NavBar extends React.Component{
+class NavBar extends React.Component{
     render(){
+        const { navbarExpand } = this.props;
+        const { openMobileNavbar } = this.props;
         return(
             <NavBarContainer>
+                {navbarExpand ? <NavBarMobile/> : ''}
                 <img src={logo_grey}/>
                 <DataContainer>
 
@@ -39,10 +46,14 @@ export default class NavBar extends React.Component{
 
                     <WishButton><img src={wish} alt='Wishlist'/></WishButton>
                     <CartButton><img src={cart} alt='Cart'/></CartButton>
-                    <HamburgerButton><img src={hamburger} alt='More'/></HamburgerButton>
+                    <HamburgerButton onClick={openMobileNavbar}><img src={hamburger} alt='More'/></HamburgerButton>
 
                 </DataContainer>
             </NavBarContainer>
         )
     }
 }
+
+export default connect(({ navbar: { navbarExpand } }) => ({
+    navbarExpand
+}), { openMobileNavbar })(NavBar)

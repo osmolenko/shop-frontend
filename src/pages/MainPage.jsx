@@ -9,9 +9,12 @@ import ContactUs from "../components/MainPage/contactUs/ContactUs";
 import {Footer} from "../components/footer/Footer";
 import CatList from "../components/MainPage/lists/CatList";
 import ProductList from "../components/MainPage/lists/ProductList";
+import NavBarMobile from "../components/header/NavBarMobile";
+import {NavBarContainer} from "../components/header/NavBar.styled";
+import {connect} from "react-redux";
 
 
-export default class MainPage extends React.Component{
+class MainPage extends React.Component{
 
 
     render(){
@@ -37,8 +40,12 @@ export default class MainPage extends React.Component{
 
         const manList = ['ABONETT, Венгрия', 'Almawin, Германия', 'Amelon, Иран', 'Amma, Индия/Украина', 'Фрея, Украина', 'August, Украина', 'BDJO.honey, Украина', 'Almawin, Германия', 'Bio Levante, Италия', 'Bio Nota, Польша', 'Bio Planer, Польша', 'Biomir, Украина', 'Фрея, Украина', 'Vivo, Украина', 'Vins, Украина', 'Biomir, Украина', 'De La Mark, Украина', 'Deo, Болгария', 'EasyGreen, США', 'Eco Panda, Австрия']
 
+        const { navbarExpand } = this.props;
+
         return(
             <MainPageContainer>
+                {navbarExpand ? '' : ''}
+
                 <Header/>
                 <Slider/>
                 <CatList data={categories}/>
@@ -52,3 +59,7 @@ export default class MainPage extends React.Component{
         )
     }
 }
+
+export default connect(({navbar: navbarExpand}) => ({
+    navbarExpand
+}), null)(MainPage)
