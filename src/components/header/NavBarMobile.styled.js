@@ -82,13 +82,10 @@ export const NavBarMobileCartButton = styled(CartButton)`
 export const NavBarMobileSearchContainer = styled(SearchContainer)`
   display: none;
   
-  @media ${device.tablet} {
-    display: block;
-    background: #FFF;
-  }
-  
   @media ${device.mobile} {
+    background: #FFF;
     margin-bottom: 63px;
+    display: block;
   }
 `
 

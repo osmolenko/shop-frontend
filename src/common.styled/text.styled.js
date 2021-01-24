@@ -54,3 +54,13 @@ export const ManFont = styled.span`
   font-size: 18px;
   line-height: 24px;
 `
+
+export const NotFoundTxt = styled.span`
+  font-family: Noto Sans;
+  font-size: 19px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 29px;
+  letter-spacing: 0em;
+  text-align: left;
+`

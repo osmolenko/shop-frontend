@@ -6,7 +6,6 @@ import {catsLink} from "../../common.styled/colors.styled";
 export const FooterTopContainer = styled.div`
   display: grid;
   grid-template-areas: "logo links numbers social";
-  margin-top: 80px;
   padding: 40px;
   background: ${catsLink};
   

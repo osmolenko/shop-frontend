@@ -13,6 +13,7 @@ export const greenNews = '#4E7C24';
 export const blackText = '#262626';
 export const blackHeading = 'rgba(38, 38, 38, 0.85)';
 export const textAdditional = '#A9A9A9';
+export const textGrey = 'rgba(71, 71, 71, 0.81)';
 
 //Inputs
 export const lightGreyInput = '#EBEBEB';
