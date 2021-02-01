@@ -1,11 +1,12 @@
 import React from 'react';
 import {
-    NotFoundButton,
     NotFoundContainer,
-    NotFoundHeader, NotFoundImage,
+    NotFoundHeader,
+    NotFoundImage,
     NotFoundInfoContainer,
     NotFoundText
 } from "./NotFound.styled";
+import ShopButton from "../ui-kit/ShopButton";
 
 class NotFound extends React.Component{
     render() {
@@ -18,7 +19,7 @@ class NotFound extends React.Component{
                     <NotFoundText>
                         Кажется, этой страницы не существует, либо она временно не работает.
                     </NotFoundText>
-                    <NotFoundButton>Вернуться на главную</NotFoundButton>
+                    <ShopButton green width='262' text='Вернутся на главную' href="321"/>
                 </NotFoundInfoContainer>
 
                 <NotFoundImage src='https://shop.osmolenko.cloud/404/404.png' alt='Not found!'/>

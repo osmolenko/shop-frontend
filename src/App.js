@@ -5,6 +5,7 @@ import Header from "./components/header/Header";
 import {Footer} from "./components/footer/Footer";
 import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
 import NotFound from "./pages/NotFound";
+import Thanks from "./pages/Thanks";
 
 class App extends React.Component {
     render() {
@@ -21,6 +22,11 @@ class App extends React.Component {
                         <Route exact path='/'>
                             <MainPage/>
                         </Route>
+
+                        <Route path='/thanks'>
+                            <Thanks/>
+                        </Route>
+
                         <Route path='*'>
                             <NotFound/>
                         </Route>

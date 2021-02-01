@@ -141,6 +141,12 @@ export const AddToCart = styled.button`
   border-radius: 70px;
   padding: 15px 85px 16px 85px;
   text-align: center;
+
+  &:hover {
+    cursor: pointer;
+    filter: drop-shadow(0px 0px 8px rgba(77, 136, 17, 0.55));
+  }
+  
   @media ${device.tablet} {
     padding: 15px 90px 16px 90px;
   }

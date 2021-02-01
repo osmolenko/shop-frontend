@@ -55,29 +55,6 @@ export const NotFoundText = styled(NotFoundTxt)`
   margin: 40px 0 42px 0;
 `
 
-export const NotFoundButton = styled.button`
-  display: block;
-  height: 60px;
-  width: 262px;
-  outline: 0;
-  border: 0;
-  background-color: ${green};
-  color: #FFF;
-  border-radius: 70px;
-  text-align: center;
-
-  font-family: Noto Sans;
-  font-size: 17px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 24px;
-  letter-spacing: 0em;
-
-  @media ${device.mobile} {
-    width: 100%;
-  }
-`
-
 export const NotFoundImage = styled.img`
   height: 249px;
   width: 675.35791015625px;
