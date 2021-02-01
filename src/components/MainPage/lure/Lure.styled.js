@@ -2,13 +2,16 @@ import styled from 'styled-components'
 import {LureFont} from "../../../common.styled/text.styled";
 import {device} from "../../../common.styled/media.styled";
 import {blackText} from "../../../common.styled/colors.styled";
+import Lureo from '../../../images/lure/lure1.png'
+import Luret from '../../../images/lure/lure2.png'
+
 
 export const LureContainer = styled.div`
   height: 650px;
   display: flex;
   justify-content: center;
   padding-top: 110px;
-  background-image: url("https://shop.osmolenko.cloud/lure/lure2.png"), url("https://shop.osmolenko.cloud/lure/lure1.png");
+  background-image: url(${Luret}), url(${Lureo});
   background-repeat: no-repeat;
   background-position: top 50px left 0px, bottom 32px right 0px;
   

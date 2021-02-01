@@ -2,12 +2,15 @@ import styled from 'styled-components'
 import {device} from "../../../common.styled/media.styled";
 import {NewsTxt} from "../../../common.styled/text.styled";
 import {NewsInput} from "../../../common.styled/inputs.styled";
+import newslg from '../../../images/news/news-lg.png'
+import newsmd from '../../../images/news/news-md.png'
+import newssm from '../../../images/news/news-sm.png'
 
 export const NewsContainer = styled.div`
   display: flex;
   align-items: center;
   flex-flow: column;
-  background-image: url(https://shop.osmolenko.cloud/news/news-lg.png);
+  background-image: url(${newslg});
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -15,12 +18,12 @@ export const NewsContainer = styled.div`
   height: 329px;
   
   @media ${device.tablet} {
-    background-image: url(https://shop.osmolenko.cloud/news/news-md.png);
+    background-image: url(${newsmd});
     height: 411px;
   }
 
   @media ${device.mobile} {
-    background-image: url(https://shop.osmolenko.cloud/news/news-sm.png);
+    background-image: url(${newssm});
     height: 690px;
   }
 `

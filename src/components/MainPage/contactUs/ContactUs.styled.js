@@ -1,18 +1,19 @@
 import styled from 'styled-components'
 import {blackText, green} from "../../../common.styled/colors.styled";
 import {device} from "../../../common.styled/media.styled";
+import contactUs from '../../../images/contactUs.png';
 
 export const ContactUsContainer = styled.div`
   padding: 30px 460px 85px 460px;
   margin: 80px 0;
-  background-image: url('https://shop.osmolenko.cloud/contactUs.png');
+  background-image: url(${contactUs});
   background-repeat: no-repeat;
-  background-position: right 340px top 50px;
+  background-position: center;
   background-size: 750px;
   
   @media ${device.tablet} {
     padding: 30px 60px 85px 60px;
-    background-position: left 15px top 50px;
+    background-position: center;
     background-size: 750px;
   }
   
