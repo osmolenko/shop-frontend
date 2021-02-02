@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import {CartButton, NavBarButton, SearchButton, SearchContainer, SearchInput, WishButton} from "./NavBar.styled";
 import {device} from "../../common.styled/media.styled";
+import openMenu from '../../images/openMenu.png'
 
 export const NavBarMobileContainer = styled.div`
   z-index: 99;
@@ -9,7 +10,7 @@ export const NavBarMobileContainer = styled.div`
   left: 0;
   height: 100vh;
   width: 100vw;
-  background: url('https://shop.osmolenko.cloud/openMenu.png') no-repeat;
+  background: url(${openMenu}) no-repeat;
   background-size: cover;
   
   display: flex;

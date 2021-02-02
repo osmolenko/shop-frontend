@@ -7,6 +7,7 @@ import {
     NotFoundText
 } from "./NotFound.styled";
 import ShopButton from "../ui-kit/ShopButton";
+import NotFoundimg from '../images/404/404.png'
 
 class NotFound extends React.Component{
     render() {
@@ -22,7 +23,7 @@ class NotFound extends React.Component{
                     <ShopButton green width='262' text='Вернутся на главную' href="321"/>
                 </NotFoundInfoContainer>
 
-                <NotFoundImage src='https://shop.osmolenko.cloud/404/404.png' alt='Not found!'/>
+                <NotFoundImage src={NotFoundimg} alt='Not found!'/>
 
             </NotFoundContainer>
         )
