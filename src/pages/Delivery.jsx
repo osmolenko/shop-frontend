@@ -20,6 +20,7 @@ export default class Delivery extends React.Component{
     render() {
         return(
             <DeliveryBlockContainer>
+
                 <DeliveryContainer>
 
                     <HeaderText>Доставка товаров</HeaderText>

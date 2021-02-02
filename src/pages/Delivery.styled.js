@@ -1,14 +1,20 @@
 import styled from 'styled-components'
 import {blackHeading, lightGreen, textAdditional} from "../common.styled/colors.styled";
+import {device} from "../common.styled/media.styled";
 
 export const DeliveryBlockContainer = styled.div`
-  display: flex;
-  padding: 60px 66px 90px 60px;
-  justify-content: space-between;
+  display: grid;
+  padding: 40px 66px 90px 60px;
+  grid-template-areas: "delivery pay";
+  
+  @media ${device.tablet}{
+    grid-template-areas: "delivery" "pay";
+    padding: 20px 28px 40px 28px;
+  }
 `
 
 export const DeliveryContainer = styled.div`
-  
+  grid-area: delivery;
 `
 
 export const HeaderText = styled.h3`
@@ -38,6 +44,17 @@ export const TableRow = styled.div`
     grid-template-columns: 100%;
     border: none;
   }
+  
+  @media ${device.mobile} {
+    grid-template-areas: "order" "arrow" "delivery";
+    grid-template-columns: 100%;
+    grid-template-rows: 10% 80% 10%;
+    align-items: center;
+
+    &:nth-child(4){
+      grid-template-rows: 100%;
+    }
+  }
 `
 
 export const TableOrderColumn = styled.div`
@@ -48,6 +65,10 @@ export const TableOrderColumn = styled.div`
   
   & > img{
     margin-right: 10px;
+  }
+  
+  @media ${device.mobile} {
+    justify-content: center;
   }
 `
 
@@ -62,6 +83,12 @@ export const TableArrowColumn = styled(TableOrderColumn)`
     & > img{
       margin: 0;
     }
+  @media ${device.mobile} {
+    transform: rotate(90deg);
+    padding: 20px;
+  }
+  
+  
 `
 
 export const TextAdd = styled.span`
@@ -89,15 +116,29 @@ export const DataText = styled.span`
 `
 
 export const PayContainer = styled.div`
+  grid-area: pay;
   margin-left: 30px;
+  
+  @media ${device.tablet} {
+    margin: 0;
+  }
 `
 
 export const PayMethodContainer = styled.div`
   display: grid;
   grid-template-areas: "boldtext text";
   grid-column-gap: 20px;
-  grid-template-columns: 160px 420px;
+  grid-template-columns: 26% 74%;
   margin-bottom: 30px;
+  
+  @media ${device.tablet} {
+    grid-template-columns: 30% 70%;
+  }
+
+  @media ${device.mobile} {
+    grid-template-areas: "boldtext" "text";
+    grid-template-columns: 100%;
+  }
 `
 
 export const BoldDataText = styled(DataText)`
