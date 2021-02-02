@@ -50,6 +50,14 @@ h4{
   color: #C4C4C4;
 }
 
+h5{
+  font-family: 'Exo 2';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 19px;
+  line-height: 41px;
+}
+
 
 @media only screen and (max-width: 425px) {
   h1{
@@ -87,5 +95,13 @@ h4{
     font-size: 23px;
     line-height: 41px;
     color: #C4C4C4;
+  }
+
+  h5{
+    font-family: 'Exo 2';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 120%;
   }
 }

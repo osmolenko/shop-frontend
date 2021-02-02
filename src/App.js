@@ -6,6 +6,7 @@ import {Footer} from "./components/footer/Footer";
 import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
 import NotFound from "./pages/NotFound";
 import Thanks from "./pages/Thanks";
+import Delivery from "./pages/Delivery";
 
 class App extends React.Component {
     render() {
@@ -25,6 +26,10 @@ class App extends React.Component {
 
                         <Route path='/thanks'>
                             <Thanks/>
+                        </Route>
+
+                        <Route path='/delivery'>
+                            <Delivery/>
                         </Route>
 
                         <Route path='*'>
