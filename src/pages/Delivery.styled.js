@@ -1,11 +1,15 @@
 import styled from 'styled-components'
 import {blackHeading, lightGreen, textAdditional} from "../common.styled/colors.styled";
 import {device} from "../common.styled/media.styled";
+import background from '../images/delivery.png'
 
 export const DeliveryBlockContainer = styled.div`
   display: grid;
   padding: 40px 66px 90px 60px;
   grid-template-areas: "delivery pay";
+  background-image: url(${background});
+  background-repeat: no-repeat;
+  background-position: right bottom;
   
   @media ${device.tablet}{
     grid-template-areas: "delivery" "pay";
