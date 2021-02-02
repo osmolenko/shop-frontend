@@ -7,6 +7,11 @@ import Manufacturers from "../components/MainPage/manufacturers/Manufacturers";
 import ContactUs from "../components/MainPage/contactUs/ContactUs";
 import CatList from "../components/MainPage/lists/CatList";
 import ProductList from "../components/MainPage/lists/ProductList";
+import cato from '../images/cats/1.png'
+import catt from '../images/cats/2.png'
+import cath from '../images/cats/3.png'
+import catf from '../images/cats/4.png'
+
 
 
 class MainPage extends React.Component{
@@ -17,10 +22,10 @@ class MainPage extends React.Component{
             name: 'Каталог товаров',
             link: '#',
             data: [
-                { img: 'https://shop.osmolenko.cloud/cats/1.png', name: 'Сухофрукты', link: '#' },
-                { img: 'https://shop.osmolenko.cloud/cats/2.png', name: 'Товары для дома', link: '#' },
-                { img: 'https://shop.osmolenko.cloud/cats/3.png', name: 'Полезные сладости', link: '#' },
-                { img: 'https://shop.osmolenko.cloud/cats/4.png', name: 'Ароматерапия', link: '#' },
+                { img: cato, name: 'Сухофрукты', link: '#' },
+                { img: catt, name: 'Товары для дома', link: '#' },
+                { img: cath, name: 'Полезные сладости', link: '#' },
+                { img: catf, name: 'Ароматерапия', link: '#' },
             ]
         }
 

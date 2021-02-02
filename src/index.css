@@ -141,6 +141,12 @@ h5{
   color: #262626;
 }
 
+@media (max-width: 700px) {
+  .swiper-button-prev:after, .swiper-button-next:after {
+    font-size: 12px;
+  }
+}
+
 .swiper-button-next {
   right: 5% !important;
 }
