@@ -22,32 +22,10 @@ import {
     ProductStatus,
     WishButton
 } from "./Product.styled";
+import Count from "./Count";
 
 export default class Product extends React.Component{
-    constructor() {
-        super();
-        this.state = {
-            count: 1,
-        };
-    }
 
-    handleCountChange = (event) => {
-        this.setState({ count: event.target.value });
-    };
-
-    incrementCount = () => {
-        this.setState({
-            count: this.state.count + 1
-        });
-    }
-
-    decrementCount = () => {
-        if(this.state.count !== 1){
-            this.setState({
-                count: this.state.count - 1
-            });
-        }
-    }
 
     render(){
         return(
@@ -75,12 +53,7 @@ export default class Product extends React.Component{
                     <PriceRow>
                         <Price>{this.props.data.price} грн.</Price>
                         <CountContainer>
-                            <PlusMinusButton onClick={this.decrementCount}>-</PlusMinusButton>
-                            <CountInput
-                                value={this.state.count}
-                                onChange={this.handleCountChange}
-                            />
-                            <PlusMinusButton onClick={this.incrementCount}>+</PlusMinusButton>
+                            <Count/>
                         </CountContainer>
                     </PriceRow>
                     <AddToCart><AddToCartText>В корзину</AddToCartText><img src={cart}/></AddToCart>

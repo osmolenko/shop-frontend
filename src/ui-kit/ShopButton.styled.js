@@ -2,7 +2,9 @@ import styled from 'styled-components';
 import {blackHeading, green} from "../common.styled/colors.styled";
 
 export const ShopButtonBase = styled.a`
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 17px 0 18px 0;
   ${(props)=> `width: ${props.width}px;`};
   ${(props)=> `margin: ${props.margin};`};
@@ -23,6 +25,10 @@ export const ShopButtonBase = styled.a`
   &:hover {
     cursor: pointer;
     filter: drop-shadow(0px 0px 8px rgba(77, 136, 17, 0.55));
+  }
+  
+  & > img {
+    margin-left: 5px;
   }
 `
 

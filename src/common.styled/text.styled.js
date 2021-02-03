@@ -64,3 +64,11 @@ export const NotFoundTxt = styled.span`
   letter-spacing: 0em;
   text-align: left;
 `
+
+export const PriceTxt = styled.span`
+  font-family: Noto Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 30px;
+`

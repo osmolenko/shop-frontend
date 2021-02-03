@@ -7,6 +7,7 @@ import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
 import NotFound from "./pages/NotFound";
 import Thanks from "./pages/Thanks";
 import Delivery from "./pages/Delivery";
+import ProductPage from "./pages/ProductPage";
 
 class App extends React.Component {
     render() {
@@ -24,12 +25,16 @@ class App extends React.Component {
                             <MainPage/>
                         </Route>
 
-                        <Route path='/thanks'>
+                        <Route exact path='/thanks'>
                             <Thanks/>
                         </Route>
 
-                        <Route path='/delivery'>
+                        <Route exact path='/delivery'>
                             <Delivery/>
+                        </Route>
+
+                        <Route exact path='/product'>
+                            <ProductPage/>
                         </Route>
 
                         <Route path='*'>
