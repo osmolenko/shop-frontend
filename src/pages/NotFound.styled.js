@@ -8,8 +8,9 @@ import NFsm from '../images/404/404-sm.png'
 
 export const NotFoundContainer  = styled.div`
   display: grid;
-  grid-template-areas: 'info . image';
-  grid-template-columns: 420px 110px 675px;
+  grid-template-areas: 'info image';
+  grid-template-columns: 40% 50%;
+  grid-column-gap: 10%;
   padding: 106px 80px 106px 143px;
 
   background-image: url(${NFlg});
@@ -42,7 +43,7 @@ export const NotFoundInfoContainer = styled.div`
     width: 410px !important;
   }
 
-  @media ${device.tablet} {
+  @media ${device.mobile} {
     width: auto;
     margin: 0 16px;
   }
