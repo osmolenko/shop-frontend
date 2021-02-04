@@ -4,34 +4,39 @@ import {device} from "../../../common.styled/media.styled";
 import contactUs from '../../../images/contactUs.png';
 
 export const ContactUsContainer = styled.div`
-  padding: 30px 460px 85px 460px;
-  margin: 80px 0;
+  height: 1094px;
   background-image: url(${contactUs});
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 790px;
+  background-size: 1000px;
   
   @media ${device.tablet} {
     padding: 30px 60px 85px 60px;
-    background-position: center;
-    background-size: 750px;
+    background-size: 900px;
   }
   
   @media ${device.mobile} {
-    background-position: left -150px top 50px;
+    padding: 0;
   }
 `
 
 export const ContactUsHeader = styled.h2`
   text-align: center;
   color: ${blackText};
-  margin-bottom: 100px;
+  padding: 60px 0 0 0;
+  margin: 50px 0 173px 0;
+  
+  @media ${device.tablet} {
+
+  }
 `
 
 export const ContactUsForm = styled.form`
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
+  width: 350px;
 `
 
 export const ContactUsLabel = styled.label`
@@ -43,15 +48,7 @@ export const ContactUsLabel = styled.label`
   letter-spacing: 0em;
   text-align: left;
   align-self: flex-start;
-  margin-left: 90px;
-  
-  @media ${device.tablet} {
-    margin-left: 160px;
-  }
 
-  @media ${device.mobile} {
-    margin-left: 0;
-  }
 `
 
 export const ContactUsInput = styled.input`
@@ -88,33 +85,5 @@ export const ContactUsTextArea = styled.textarea`
   margin: 10px 0 25px 0;
   width: 300px;
   padding: 10px 20px;
-`
-
-export const ContactUsSubmitButton = styled.button`
-  border: 0;
-  outline: 0;
-  font-family: Noto Sans;
-  font-size: 17px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 24px;
-  letter-spacing: 0em;
-  text-align: left;
-  
-  color: #FFF;
-  background: ${green};
-  border-radius: 70px;
-  padding: 17px 66px 18px 68px;
-
-  align-self: flex-start;
-  margin-left: 90px;
-
-  @media ${device.tablet} {
-    margin-left: 160px;
-  }
-
-  @media ${device.mobile} {
-    margin-left: 0;
-  }
 `
 

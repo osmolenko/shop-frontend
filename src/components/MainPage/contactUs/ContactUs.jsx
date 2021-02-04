@@ -6,6 +6,7 @@ import {
     ContactUsInput, ContactUsLabel, ContactUsSubmit, ContactUsSubmitButton, ContactUsSubmitButtonText,
     ContactUsTextArea
 } from "./ContactUs.styled";
+import ShopButton from "../../../ui-kit/ShopButton";
 
 export default class ContactUs extends React.Component{
     render(){
@@ -26,7 +27,7 @@ export default class ContactUs extends React.Component{
                     <ContactUsLabel for='message'>Сообщение*</ContactUsLabel>
                     <ContactUsTextArea placeholder=' ' name='message' rows='5'/>
 
-                    <ContactUsSubmitButton>Отправить</ContactUsSubmitButton>
+                    <ShopButton green text='Отправить' href='#' width='230'/>
 
                 </ContactUsForm>
             </ContactUsContainer>
