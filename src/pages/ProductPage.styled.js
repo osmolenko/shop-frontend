@@ -22,6 +22,7 @@ export const TopContainer = styled.div`
 
 export const ProductPageHeader = styled.h3`
   color: ${blackHeading};
+  margin-left: 30px;
 `
 
 export const ProductPageArt = styled(StyledProductArt)`

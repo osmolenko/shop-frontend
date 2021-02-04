@@ -32,7 +32,13 @@ export const SubHeaderText = styled.h5`
 export const TableContainer = styled.div`
   border: 1px solid ${lightGreen};
   
+  width: 570px;
+  
   margin-bottom: 20px;
+  
+  @media ${device.tablet} {
+    width: auto;
+  }
 `
 
 export const TableRow = styled.div`

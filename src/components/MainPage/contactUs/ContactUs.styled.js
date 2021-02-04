@@ -9,7 +9,7 @@ export const ContactUsContainer = styled.div`
   background-image: url(${contactUs});
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 750px;
+  background-size: 790px;
   
   @media ${device.tablet} {
     padding: 30px 60px 85px 60px;

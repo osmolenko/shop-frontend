@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import {ManFont} from "../../../common.styled/text.styled";
-import {blackText} from "../../../common.styled/colors.styled";
+import {blackHeading, blackText} from "../../../common.styled/colors.styled";
 import {device} from "../../../common.styled/media.styled";
 
 export const ManContainer = styled.div`
@@ -17,6 +17,7 @@ export const ManHeader = styled.h1`
   font-size: 40px;
   line-height: 50px;
   text-align: center;
+  color: ${blackHeading};
 `
 
 export const ManListContainer = styled.div`

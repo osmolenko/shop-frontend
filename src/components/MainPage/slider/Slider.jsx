@@ -16,7 +16,7 @@ export default class Slider extends React.Component{
                 slidesPerView={1}
                 navigation
                 pagination={{ clickable: true }}
-
+                autoplay={{ delay: 5000 }}
                 loop
                 >
                 <SwiperSlide>
