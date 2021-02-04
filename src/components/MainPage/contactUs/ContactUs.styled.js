@@ -77,7 +77,9 @@ export const ContactUsTextArea = styled.textarea`
   font-style: normal;
   font-weight: 400;
   line-height: 22px;
-
+  
+  resize: none;
+  
   outline: 0;
   border: none;
   color: #000000;
