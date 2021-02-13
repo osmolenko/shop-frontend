@@ -8,6 +8,8 @@ import NotFound from "./pages/NotFound";
 import Thanks from "./pages/Thanks";
 import Delivery from "./pages/Delivery";
 import ProductPage from "./pages/ProductPage";
+import Cart from "./pages/Cart";
+import Order from "./pages/Order";
 
 class App extends React.Component {
     render() {
@@ -35,6 +37,14 @@ class App extends React.Component {
 
                         <Route exact path='/product'>
                             <ProductPage/>
+                        </Route>
+
+                        <Route exact path='/cart'>
+                            <Cart/>
+                        </Route>
+
+                        <Route exact path='/order'>
+                            <Order/>
                         </Route>
 
                         <Route path='*'>

@@ -31,7 +31,6 @@ export const NotFoundContainer  = styled.div`
   @media ${device.mobile} {
     background-image: url(${NFsm});
     padding: 51px 0 71px 0;
-
   }
 `
 

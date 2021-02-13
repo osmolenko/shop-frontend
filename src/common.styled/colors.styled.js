@@ -21,3 +21,9 @@ export const lightGreyInput = '#EBEBEB';
 //Links
 export const greyLink = '#C4C4C4';
 export const catsLink = 'rgba(38, 38, 38, 0.85)';
+
+//Cart
+export const border = '#DFDFE0';
+
+//Order
+export const ordertext = 'rgba(38, 38, 38, 0.35)';
