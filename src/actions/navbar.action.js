@@ -7,3 +7,4 @@ export const openMobileNavbar = () => ({
 export const closeMobileNavbar = () => ({
     type: CLOSE_MOBILE_NAVBAR,
 });
+

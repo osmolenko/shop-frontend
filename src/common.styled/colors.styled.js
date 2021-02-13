@@ -27,3 +27,4 @@ export const border = '#DFDFE0';
 
 //Order
 export const ordertext = 'rgba(38, 38, 38, 0.35)';
+export const orderActiveBg = 'rgba(118, 188, 47, 0.13)';
