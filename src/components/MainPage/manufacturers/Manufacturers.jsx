@@ -7,9 +7,9 @@ export default class Manufacturers extends React.Component{
             <ManContainer>
                 <ManHeader>Производители</ManHeader>
                 <ManListContainer>
-                    {this.props.data.map(value => {
+                    {this.props.data.map((value, idx) => {
                         return(
-                            <ManListItem>{value}</ManListItem>
+                            <ManListItem key={idx}>{value}</ManListItem>
                         )
                     })}
                 </ManListContainer>

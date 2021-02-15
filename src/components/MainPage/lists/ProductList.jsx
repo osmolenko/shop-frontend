@@ -15,9 +15,9 @@ export default class ProductList extends React.Component{
                     <CardListHeader>{this.props.data.name}</CardListHeader>
                 </CardHeaderContainer>
                 <CardsContainer products>
-                    {this.props.data.data.map(value => {
+                    {this.props.data.data.map((value, idx) => {
                         return(
-                            <Product data={value}/>
+                            <Product key={idx} data={value}/>
                         )
                     })}
                 </CardsContainer>

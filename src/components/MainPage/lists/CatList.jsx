@@ -19,9 +19,9 @@ export default class CatList extends React.Component{
                     <CardMoreLink href={this.props.data.link}>Все категории <img src={arrowLeft}/></CardMoreLink>
                 </CardHeaderContainer>
                 <CardsContainer>
-                    {this.props.data.data.map(value => {
+                    {this.props.data.data.map((value, idx) => {
                         return(
-                                <Cat data={value}/>
+                                <Cat key={idx} data={value}/>
                         )
                     })}
                 </CardsContainer>

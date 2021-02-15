@@ -21,11 +21,10 @@ import hamburger from '../../images/hamburger-icon.svg'
 import {connect} from "react-redux";
 import {openCats, openMobileNavbar} from "../../actions/navbar.action";
 import NavBarMobile from "./NavBarMobile";
-import Cats from "./Cats";
 
 class NavBar extends React.Component{
     render(){
-        const { navbarExpand } = this.props;
+        const { navbarExpand, catsExpand } = this.props;
         const { openMobileNavbar, openCats } = this.props;
         return(
             <NavBarContainer>
@@ -36,7 +35,7 @@ class NavBar extends React.Component{
                     <LinkContainer>
                         <GreenLink
                             href='#'
-                            onMouseOver={() => openCats()}
+                            onMouseOver={() => !catsExpand ? openCats() : ''}
                         >Категории <img src={arrowDown}/></GreenLink>
                         <Link href='#'>Про нас</Link>
                         <Link href='#'>Доставка и оплата</Link>
@@ -58,6 +57,6 @@ class NavBar extends React.Component{
     }
 }
 
-export default connect(({ navbar: { navbarExpand } }) => ({
-    navbarExpand
+export default connect(({ navbar: { navbarExpand, catsExpand } }) => ({
+    navbarExpand, catsExpand
 }), { openMobileNavbar, openCats })(NavBar)
