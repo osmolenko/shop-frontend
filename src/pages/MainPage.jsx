@@ -11,6 +11,8 @@ import cato from '../images/cats/1.png'
 import catt from '../images/cats/2.png'
 import cath from '../images/cats/3.png'
 import catf from '../images/cats/4.png'
+import Cats from "../components/header/Cats";
+import {connect} from "react-redux";
 
 
 
@@ -40,8 +42,11 @@ class MainPage extends React.Component{
 
         const manList = ['ABONETT, Венгрия', 'Almawin, Германия', 'Amelon, Иран', 'Amma, Индия/Украина', 'Фрея, Украина', 'August, Украина', 'BDJO.honey, Украина', 'Almawin, Германия', 'Bio Levante, Италия', 'Bio Nota, Польша', 'Bio Planer, Польша', 'Biomir, Украина', 'Фрея, Украина', 'Vivo, Украина', 'Vins, Украина', 'Biomir, Украина', 'De La Mark, Украина', 'Deo, Болгария', 'EasyGreen, США', 'Eco Panda, Австрия']
 
+        const { catsExpand } = this.props;
+
         return(
             <MainPageContainer>
+                {catsExpand ? <Cats/> : ''}
                 <Slider/>
                 <CatList data={categories}/>
                 <ProductList data={sale}/>
@@ -54,4 +59,8 @@ class MainPage extends React.Component{
     }
 }
 
-export default MainPage
+export default connect(
+    ({ navbar: {catsExpand}}) => ({
+        catsExpand
+    })
+)(MainPage);

@@ -4,6 +4,14 @@ export const apiUrl = 'http://localhost:1337/'
 export const OPEN_MOBILE_NAVBAR = 'OPEN_MOBILE_NAVBAR';
 export const CLOSE_MOBILE_NAVBAR = 'CLOSE_MOBILE_NAVBAR';
 
+//cats
+export const OPEN_CATS = 'OPEN_CATS';
+export const CLOSE_CATS = 'CLOSE_CATS';
+export const GET_CATS = 'GET_CATS';
+export const GET_CATS_MORE_DATA = 'GET_CATS_MORE_DATA';
+export const CHOOSE_MAIN_CAT = 'CHOOSE_MAIN_CAT';
+
+
 //order
 export const CHANGE_ORDER_NAME = 'CHANGE_ORDER_NAME';
 export const CHANGE_ORDER_PHONE = 'CHANGE_ORDER_PHONE';

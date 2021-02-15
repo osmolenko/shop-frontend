@@ -23,3 +23,4 @@ export const catLink = styled.a`
   line-height: 24px;
   color: ${catsLink};
 `
+

@@ -72,3 +72,4 @@ export const PriceTxt = styled.span`
   font-size: 30px;
   line-height: 30px;
 `
+

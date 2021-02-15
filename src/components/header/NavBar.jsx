@@ -19,13 +19,14 @@ import arrowDown from '../../images/arrow-down.svg'
 import logo_grey from '../../images/logo_grey.svg'
 import hamburger from '../../images/hamburger-icon.svg'
 import {connect} from "react-redux";
-import {openMobileNavbar} from "../../actions/navbar.action";
+import {openCats, openMobileNavbar} from "../../actions/navbar.action";
 import NavBarMobile from "./NavBarMobile";
+import Cats from "./Cats";
 
 class NavBar extends React.Component{
     render(){
         const { navbarExpand } = this.props;
-        const { openMobileNavbar } = this.props;
+        const { openMobileNavbar, openCats } = this.props;
         return(
             <NavBarContainer>
                 {navbarExpand ? <NavBarMobile/> : ''}
@@ -33,7 +34,10 @@ class NavBar extends React.Component{
                 <DataContainer>
 
                     <LinkContainer>
-                        <GreenLink href='#'>Категории <img src={arrowDown}/></GreenLink>
+                        <GreenLink
+                            href='#'
+                            onMouseOver={() => openCats()}
+                        >Категории <img src={arrowDown}/></GreenLink>
                         <Link href='#'>Про нас</Link>
                         <Link href='#'>Доставка и оплата</Link>
                         <Link href='#'>Контакты</Link>
@@ -56,4 +60,4 @@ class NavBar extends React.Component{
 
 export default connect(({ navbar: { navbarExpand } }) => ({
     navbarExpand
-}), { openMobileNavbar })(NavBar)
+}), { openMobileNavbar, openCats })(NavBar)
