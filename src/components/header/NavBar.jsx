@@ -21,38 +21,44 @@ import hamburger from '../../images/hamburger-icon.svg'
 import {connect} from "react-redux";
 import {openCats, openMobileNavbar} from "../../actions/navbar.action";
 import NavBarMobile from "./NavBarMobile";
+import Cats from "./Cats";
 
 class NavBar extends React.Component{
     render(){
         const { navbarExpand, catsExpand } = this.props;
         const { openMobileNavbar, openCats } = this.props;
         return(
-            <NavBarContainer>
-                {navbarExpand ? <NavBarMobile/> : ''}
-                <img src={logo_grey}/>
-                <DataContainer>
+            <div>
+                <NavBarContainer>
+                    {navbarExpand ? <NavBarMobile/> : ''}
+                    <img src={logo_grey}/>
+                    <DataContainer>
 
-                    <LinkContainer>
-                        <GreenLink
-                            href='#'
-                            onMouseOver={() => !catsExpand ? openCats() : ''}
-                        >Категории <img src={arrowDown}/></GreenLink>
-                        <Link href='#'>Про нас</Link>
-                        <Link href='#'>Доставка и оплата</Link>
-                        <Link href='#'>Контакты</Link>
-                    </LinkContainer>
+                        <LinkContainer>
+                            <GreenLink
+                                href='#'
+                                onMouseOver={() => openCats()}
+                            >Категории <img src={arrowDown}/></GreenLink>
+                            <Link href='#'>Про нас</Link>
+                            <Link href='#'>Доставка и оплата</Link>
+                            <Link href='#'>Контакты</Link>
+                        </LinkContainer>
 
-                    <SearchContainer>
-                        <SearchInput placeholder='Поиск...'/>
-                        <SearchButton><img src={search} alt='Search'/></SearchButton>
-                    </SearchContainer>
+                        <SearchContainer>
+                            <SearchInput placeholder='Поиск...'/>
+                            <SearchButton><img src={search} alt='Search'/></SearchButton>
+                        </SearchContainer>
 
-                    <WishButton><img src={wish} alt='Wishlist'/></WishButton>
-                    <CartButton><img src={cart} alt='Cart'/></CartButton>
-                    <HamburgerButton onClick={openMobileNavbar}><img src={hamburger} alt='More'/></HamburgerButton>
+                        <WishButton><img src={wish} alt='Wishlist'/></WishButton>
+                        <CartButton><img src={cart} alt='Cart'/></CartButton>
+                        <HamburgerButton onClick={openMobileNavbar}><img src={hamburger} alt='More'/></HamburgerButton>
 
-                </DataContainer>
-            </NavBarContainer>
+                    </DataContainer>
+                </NavBarContainer>
+
+                {catsExpand ? <Cats/> : ''}
+
+            </div>
         )
     }
 }

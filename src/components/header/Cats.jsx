@@ -25,9 +25,7 @@ class Cats extends React.Component {
         const { chooseCategory, closeCats } = this.props;
 
         return (
-            <CatsContainer
-                onMouseLeave={() => closeCats()}
-            >
+            <CatsContainer onMouseLeave={() => closeCats()}>
                 <MainCatsContainer>
                     {initialData.map((e, idx) =>
                     <MainCatLink

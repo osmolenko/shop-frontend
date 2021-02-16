@@ -11,6 +11,10 @@ export const GET_CATS = 'GET_CATS';
 export const GET_CATS_MORE_DATA = 'GET_CATS_MORE_DATA';
 export const CHOOSE_MAIN_CAT = 'CHOOSE_MAIN_CAT';
 
+//catalog
+export const CATALOG_OPEN_MAIN_CAT = 'CATALOG_OPEN_MAIN_CAT';
+export const CATALOG_OPEN_CAT = 'CATALOG_OPEN_CAT';
+
 
 //order
 export const CHANGE_ORDER_NAME = 'CHANGE_ORDER_NAME';

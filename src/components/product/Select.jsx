@@ -22,16 +22,16 @@ export default function Select(props) {
         };
 
         return(
-            <DropDownContainer>
+            <DropDownContainer width={props.width}>
                 <DropDownHeader onClick={toggling}>
                     {selectedOption || props.option[0]}
                     <SelectArrow src={arrow} alt=' '/>
                 </DropDownHeader>
                 {isOpen && (
-                    <DropDownListContainer>
+                    <DropDownListContainer width={props.width} onMouseLeave={toggling}>
                         <DropDownList>
-                            {props.option.map(option => (
-                                <ListItem onClick={onOptionClicked(option)} key={Math.random()}>
+                            {props.option.map((option, idx) => (
+                                <ListItem onClick={onOptionClicked(option)} key={idx}>
                                     {option}
                                 </ListItem>
                             ))}

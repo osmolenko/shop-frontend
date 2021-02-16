@@ -73,3 +73,18 @@ export const PriceTxt = styled.span`
   line-height: 30px;
 `
 
+export const CatalogSortText = styled.span`
+  font-family: Noto Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+`
+
+export const CatalogSortListText = styled.span`
+  font-family: Noto Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 20px;
+`

@@ -32,3 +32,4 @@ export const orderActiveBg = 'rgba(118, 188, 47, 0.13)';
 //Cats
 export const catsActiveBg = 'rgba(190, 240, 120, 0.3)';
 export const catsLinkGrey = '#7D7D7F';
+export const catsInactiveBorder = '#DFDFE0';

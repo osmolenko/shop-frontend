@@ -3,7 +3,8 @@ import {blackText} from "../../common.styled/colors.styled";
 import {device} from "../../common.styled/media.styled";
 
 export const DropDownContainer = styled("div")`
-  width: 25rem;
+  width: ${(props)=> props.width};
+
   cursor: pointer;
 
   @media ${device.tablet} {
@@ -23,7 +24,7 @@ export const DropDownHeader = styled("div")`
   border: 1px solid #DFDFE0;
   border-radius: 32px;
   margin-bottom: 0.8em;
-  padding: 19px 30px 19px 28px;
+  padding: 16px 23px 16px 24px;
   
   font-family: Noto Sans;
   font-size: 17px;
@@ -45,7 +46,7 @@ export const DropDownHeader = styled("div")`
 export const DropDownListContainer = styled("div")`
   position: absolute;
   z-index: 100;
-  width: 25rem;
+  width: ${(props)=> props.width};
 
   @media ${device.tablet} {
     width: 35rem;

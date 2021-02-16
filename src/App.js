@@ -1,6 +1,5 @@
 import React from 'react';
 import MainPage from "./pages/MainPage";
-import {connect} from "react-redux";
 import Header from "./components/header/Header";
 import {Footer} from "./components/footer/Footer";
 import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
@@ -10,13 +9,12 @@ import Delivery from "./pages/Delivery";
 import ProductPage from "./pages/ProductPage";
 import Cart from "./pages/Cart";
 import Order from "./pages/Order";
+import Catalog from "./pages/Catalog";
 
 class App extends React.Component {
     render() {
-        const { navbarExpand } = this.props;
         return (
             <div>
-                {navbarExpand ? '' : ''}
                 <Header/>
 
                 {/*ROUTER*/}
@@ -47,6 +45,10 @@ class App extends React.Component {
                             <Order/>
                         </Route>
 
+                        <Route exact path='/catalog'>
+                            <Catalog title='Каталог — ECO SHOP'/>
+                        </Route>
+
                         <Route path='*'>
                             <NotFound/>
                         </Route>
@@ -61,6 +63,4 @@ class App extends React.Component {
     }
 }
 
-export default connect(({navbar: navbarExpand}) => ({
-    navbarExpand
-}), null)(App)
+export default App;
