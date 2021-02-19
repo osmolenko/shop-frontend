@@ -29,9 +29,9 @@ import Count from "../components/product/Count";
 import ShopButton from "../ui-kit/ShopButton";
 import cart from '../images/cartW.svg'
 import ProductList from "../components/MainPage/lists/ProductList";
-import {MainPageContainer} from "./MainPage.styled";
+import {connect} from "react-redux";
 
-export default class ProductPage extends React.Component{
+class ProductPage extends React.Component{
     render() {
 
         const options = ["110г.", "150г.", "250г."];
@@ -52,12 +52,14 @@ export default class ProductPage extends React.Component{
             ]
         }
 
+        const { product } = this.props;
+
         return (
             <ProductPageContainer>
 
                 <TopContainer>
-                    <ProductPageHeader>Английская соль для ванн Relaxing Lavender </ProductPageHeader>
-                    <ProductPageArt>Артикул: 12414405</ProductPageArt>
+                    <ProductPageHeader>{product.name}</ProductPageHeader>
+                    <ProductPageArt>Артикул: {product.art}</ProductPageArt>
                 </TopContainer>
 
 
@@ -65,22 +67,20 @@ export default class ProductPage extends React.Component{
 
                     <ImagesContainer>
                         <SmallImageContainer>
-                            <SmallImage src='https://s3.images-iherb.com/aur/aur91696/y/14.jpg' alt='Английская соль для ванн Relaxing Lavender'/>
-                            <SmallImage src='https://s3.images-iherb.com/aur/aur91696/y/14.jpg' alt='Английская соль для ванн Relaxing Lavender'/>
+                            <SmallImage src={product.images[0].src} alt='Английская соль для ванн Relaxing Lavender'/>
+                            <SmallImage src={product.images[1].src} alt='Английская соль для ванн Relaxing Lavender'/>
                         </SmallImageContainer>
-                        <BigImage src='https://s3.images-iherb.com/aur/aur91696/y/14.jpg' alt='Английская соль для ванн Relaxing Lavender'/>
+                        <BigImage src={product.images[2].src} alt='Английская соль для ванн Relaxing Lavender'/>
                     </ImagesContainer>
 
 
                     <SmallInfo>
-                        <ProductPageArtSm>Артикул: 12414405</ProductPageArtSm>
-                        <SmallInfoPrice>120 грн.</SmallInfoPrice>
+                        <ProductPageArtSm>Артикул: {product.art}</ProductPageArtSm>
+                        <SmallInfoPrice>{product.price} грн.</SmallInfoPrice>
                         <SmallInfoStatus>В наличии</SmallInfoStatus>
-                        <SmallInfoText>
-                            Морская соль - это богатый природный концентрат соли и микроэлементов, необходимых для нормальной работы всех органов тела. Благодаря тонизирующей действия, лаванда справедливо считается «растением № 1» в ароматерапии.
-                        </SmallInfoText>
+                        <SmallInfoText>{product.smallInfo}</SmallInfoText>
 
-                        <Select option={options}/>
+                        <Select width='400px' option={product.options}/>
 
                         <SmallInfoCount>
                             <Count/>
@@ -94,14 +94,10 @@ export default class ProductPage extends React.Component{
 
                 <BigInfoContainer>
                     <BigInfoHeader>Характеристики</BigInfoHeader>
-                    <BigInfoText>
-                        Эфирное масло лаванды помогает при бессоннице, подавленном состоянии, головной боли. Кроме того, масло лаванды является незаменимым помощником для ухода за проблемной кожей, в лечении ран. Ароматная ванна снимает усталость, стрессовое напряжение, повышает работоспособность и улучшает настроение.
-                        <p/>
-                        Растворите морскую соль в теплой воде (35 ÷ 40 ° C) из расчета 80-500 г на ванну. Для принятия местных ванн соль растворить в воде из расчета 100 г на 0,4-8,0 л воды (35 ÷ 40 ° C) .Приймайте ванну 15 минут. Ополосниться проточной водой. Не пользуйтесь мылом. После солевой ванны полежите 20 минут. Рекомендуется курс 8-10 ванн в течение 14-20 дней.
-                    </BigInfoText>
+                    <BigInfoText>{product.features.text}</BigInfoText>
 
                     <BigInfoTable>
-                        {data.map(e => (
+                        {product.features.data.map(e => (
                             <BigInfoRow>
                                 <BigInfoTypeColumn>{e.type}</BigInfoTypeColumn>
                                 <BigInfoDataColumn>{e.data}</BigInfoDataColumn>
@@ -111,15 +107,15 @@ export default class ProductPage extends React.Component{
                     </BigInfoTable>
                 </BigInfoContainer>
 
-                <ProductList data={more}/>
-
-
-
-
-
-
+                {/*<ProductList data={product.more }/>*/}
 
             </ProductPageContainer>
         )
     }
 }
+
+export default connect(
+    ({product: { product }}) => ({
+        product
+    })
+)(ProductPage)
